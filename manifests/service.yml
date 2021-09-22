@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "fabmedicald01-3d90"
+    labels:
+        app: "fabmedicald01-3d90"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 3000
+      targetPort: 3000
+      protocol: TCP
+      name: http
+    selector:
+        app: "fabmedicald01-3d90"
