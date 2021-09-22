@@ -20,7 +20,7 @@ jobs:
       id: build-image
       run: |
         docker build "$GITHUB_WORKSPACE/content-web" -f  "content-web/Dockerfile" -t fabmedicald01.azurecr.io/fabmedicald01:${{ github.sha }} --label dockerfile-path=content-web/Dockerfile
-        docker push fabmedicald01.azurecr.io/content-web:${{ github.sha }}
+        docker push fabmedicald01.azurecr.io/fabmedicald01:${{ github.sha }}
     
     - uses: azure/k8s-set-context@v1
       with:
