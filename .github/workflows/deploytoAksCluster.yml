@@ -1,10 +1,4 @@
-on:
-  push:
-    branches:    
-      # Push events on main branch
-      - main
-    paths:
-      - 'config-web/*'
+on: [ push ]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
