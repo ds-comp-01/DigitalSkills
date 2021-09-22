@@ -1,10 +1,18 @@
-on: [ push ]
+on:
+  push:
+    branches:    
+      # Push events on main branch
+      - main
+    paths:
+      - 'config-web/*'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    
+    - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.YOUR_PAT_TOKEN }}
+        
     - uses: azure/docker-login@v1
       with:
         login-server: fabmedicald01.azurecr.io
