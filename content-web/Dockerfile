@@ -1,4 +1,7 @@
 FROM node:dubnium-alpine AS base
+# TASK 13
+ENV CONTENT_APT_URL=http://20.61.48.40:3001/
+
 RUN apk -U add curl
 WORKDIR /usr/src/app
 EXPOSE 3000
