@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "fabmedicald01-3d90"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "fabmedicald01-3d90"
+  template:
+    metadata:
+      labels:
+        app: "fabmedicald01-3d90"
+    spec:
+      containers:
+        - name: "fabmedicald01-3d90"
+          image: "fabmedicald01.azurecr.io/fabmedicald01"
+          ports:
+          - containerPort: 3000
