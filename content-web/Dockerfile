@@ -20,7 +20,7 @@ RUN ng build
 FROM base as final
 
 # TASK 13
-ENV CONTENT_APT_URL=http://localhost:3001/
+ENV CONTENT_API_URL=http://localhost:3001/
 
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app .
