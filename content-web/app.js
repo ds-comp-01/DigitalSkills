@@ -10,7 +10,7 @@ const contentApiUrl = process.env.CONTENT_API_URL || "http://20.61.48.40:3001/";
 
 
 function getSessions(cb) {
-  request(contentApiUrl + '/sessions', function (err, response, body) {
+  request(contentApiUrl + 'sessions', function (err, response, body) {
     if (err) {
       return cb(err);
     }
@@ -20,7 +20,7 @@ function getSessions(cb) {
 }
 
 function getSpeakers(cb) {
-  request(contentApiUrl + '/speakers', function (err, response, body) {
+  request(contentApiUrl + 'speakers', function (err, response, body) {
     if (err) {
       return cb(err);
     }
@@ -30,7 +30,7 @@ function getSpeakers(cb) {
 }
 
 function stats(cb) {
-  request(contentApiUrl + '/stats', function (err, response, body) {
+  request(contentApiUrl + 'stats', function (err, response, body) {
     if (err) {
       return cb(err);
     }
